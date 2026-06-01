@@ -1,0 +1,8 @@
+node_modules/
+dist/
+.env
+keys/
+logs/*.json
+logs/*.jsonl
+!logs/x402_settlements.md
+*.local

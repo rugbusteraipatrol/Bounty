@@ -1,0 +1,34 @@
+{
+  "name": "sap-ace-bounty-agent",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Deal Scout Agent for the OOBE x Ace Data Cloud x402 bounty.",
+  "type": "module",
+  "scripts": {
+    "dev": "tsx src/index.ts run --dry-run",
+    "run": "tsx src/index.ts run",
+    "register": "tsx src/index.ts register",
+    "doctor": "tsx src/index.ts doctor",
+    "create-burner": "node scripts/create-burner-wallet.mjs",
+    "balance": "node scripts/check-burner-balance.mjs",
+    "dashboard": "node scripts/generate-dashboard.mjs",
+    "build": "tsc -p tsconfig.json",
+    "start": "node dist/index.js run"
+  },
+  "dependencies": {
+    "@acedatacloud/sdk": "2026.504.2",
+    "@acedatacloud/x402-client": "2026.531.3",
+    "@oobe-protocol-labs/synapse-client-sdk": "2.0.6",
+    "@oobe-protocol-labs/synapse-sap-sdk": "^0.19.1",
+    "@solana/spl-token": "^0.4.14",
+    "@solana/web3.js": "1.98.4",
+    "bs58": "^6.0.0",
+    "dotenv": "17.2.3",
+    "zod": "4.4.3"
+  },
+  "devDependencies": {
+    "@types/node": "24.10.1",
+    "tsx": "4.22.4",
+    "typescript": "5.9.3"
+  }
+}
