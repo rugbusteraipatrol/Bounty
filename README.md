@@ -4,6 +4,13 @@ Autonomous Deal Scout for the OOBE Protocol x Ace Data Cloud bounty.
 
 Primary category: **Ace Data Cloud Usage (x402 Facilitator)**.
 
+## Live Evidence
+
+- Public dashboard: https://rugbusteraipatrol.github.io/Bounty/dashboard/
+- SAP agent PDA: `3QFF3jzskQcCagkQLc9c4mno6HvWD5xmdgdXfMigTt9m`
+- SAP registration tx: https://solscan.io/tx/2UdKHkCphzbBitMnMERWAQ1YdydGKu12sbFXs426nsqx6jsZvMtMsscKdoDAistkjJ1KuUcVfFLgsHaCbsiZUoFL
+- x402 settlements logged in `logs/x402_settlements.md`
+
 ## Why This Agent
 
 Deal Scout creates legitimate repeat usage: each product gets its own workflow and each workflow uses distinct Ace Data Cloud services. It avoids artificial loops while still producing meaningful x402 volume.

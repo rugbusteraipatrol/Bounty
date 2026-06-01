@@ -353,6 +353,7 @@ function renderHtml({ rows, cleanRows, stats, latestRun }) {
         <div class="eyebrow">Deal Scout Agent</div>
         <h1>Autonomous Buyer Assistant</h1>
         <p class="subtitle">Scans real product categories, pays Ace Data Cloud via x402 for web search, deal reasoning, and Flux visuals, then logs every settlement on Solana mainnet.</p>
+        <p class="subtitle small">SAP registered agent: <a href="https://solscan.io/tx/2UdKHkCphzbBitMnMERWAQ1YdydGKu12sbFXs426nsqx6jsZvMtMsscKdoDAistkjJ1KuUcVfFLgsHaCbsiZUoFL" target="_blank" rel="noreferrer">3QFF...Tt9m</a></p>
       </div>
       <div class="status-pill"><span class="dot"></span> REAL ON-CHAIN • NOT SIMULATED</div>
     </header>
@@ -411,7 +412,8 @@ function renderHtml({ rows, cleanRows, stats, latestRun }) {
       ["Total Settlements", stats.totalSettlements, "green", "Real x402 payments on Solana"],
       ["Clean 200 OK", stats.clean200, "cyan", stats.successRate + "% service fulfillment"],
       ["USDC Spent", "$" + stats.totalSpent.toFixed(4), "amber", "Paid through x402, no API key"],
-      ["Services Used", stats.services.length, "purple", stats.services.join(", ")]
+      ["Services Used", stats.services.length, "purple", stats.services.join(", ")],
+      ["SAP Registered", "YES", "green", "Agent PDA 3QFF...Tt9m"]
     ];
     document.getElementById("stats").innerHTML = statCards.map(([label, value, color, hint]) => \`
       <article class="card">
