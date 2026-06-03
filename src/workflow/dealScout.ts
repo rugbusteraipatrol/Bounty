@@ -136,7 +136,66 @@ const defaultProducts: ProductCandidate[] = [
   { id: "wireless-mic", name: "Wireless microphone", query: "wireless microphone deal Serbia", targetPriceUsd: 85 },
   { id: "bike-trainer", name: "Indoor bike trainer", query: "indoor bike trainer sale Serbia", targetPriceUsd: 160 },
   { id: "tool-kit", name: "Home repair tool kit", query: "home repair tool kit discount Serbia", targetPriceUsd: 55 },
-  { id: "water-filter", name: "Countertop water filter", query: "countertop water filter sale Serbia", targetPriceUsd: 65 }
+  { id: "water-filter", name: "Countertop water filter", query: "countertop water filter sale Serbia", targetPriceUsd: 65 },
+  { id: "smart-lock", name: "Smart door lock", query: "smart door lock discount Serbia", targetPriceUsd: 120 },
+  { id: "video-doorbell", name: "Video doorbell", query: "video doorbell sale Serbia", targetPriceUsd: 90 },
+  { id: "wifi-camera", name: "WiFi security camera", query: "wifi security camera deal Serbia", targetPriceUsd: 55 },
+  { id: "nvr-kit", name: "Home NVR camera kit", query: "home NVR camera kit Serbia discount", targetPriceUsd: 240 },
+  { id: "label-maker", name: "Label maker", query: "label maker sale Serbia", targetPriceUsd: 40 },
+  { id: "photo-printer", name: "Portable photo printer", query: "portable photo printer deal Serbia", targetPriceUsd: 110 },
+  { id: "ultrawide-monitor", name: "Ultrawide monitor", query: "ultrawide monitor sale Serbia", targetPriceUsd: 260 },
+  { id: "webcam-4k", name: "4K webcam", query: "4K webcam discount Serbia", targetPriceUsd: 85 },
+  { id: "stream-deck", name: "Macro control pad", query: "macro control pad stream deck deal Serbia", targetPriceUsd: 95 },
+  { id: "usb-c-hub", name: "USB-C hub", query: "USB-C hub sale Serbia", targetPriceUsd: 45 },
+  { id: "gan-charger", name: "GaN charger", query: "GaN charger discount Serbia", targetPriceUsd: 35 },
+  { id: "power-bank-20000", name: "20000mAh power bank", query: "20000mAh power bank sale Serbia", targetPriceUsd: 45 },
+  { id: "ebook-reader", name: "E-book reader", query: "ebook reader deal Serbia", targetPriceUsd: 130 },
+  { id: "action-camera", name: "Action camera", query: "action camera discount Serbia", targetPriceUsd: 160 },
+  { id: "drone-mini", name: "Mini camera drone", query: "mini camera drone sale Serbia", targetPriceUsd: 220 },
+  { id: "electric-toothbrush", name: "Electric toothbrush", query: "electric toothbrush deal Serbia", targetPriceUsd: 55 },
+  { id: "hair-dryer", name: "Ionic hair dryer", query: "ionic hair dryer discount Serbia", targetPriceUsd: 70 },
+  { id: "beard-trimmer", name: "Beard trimmer", query: "beard trimmer sale Serbia", targetPriceUsd: 40 },
+  { id: "rice-cooker", name: "Rice cooker", query: "rice cooker deal Serbia", targetPriceUsd: 55 },
+  { id: "bread-maker", name: "Bread maker", query: "bread maker discount Serbia", targetPriceUsd: 100 },
+  { id: "slow-cooker", name: "Slow cooker", query: "slow cooker sale Serbia", targetPriceUsd: 65 },
+  { id: "soda-maker", name: "Soda maker", query: "soda maker deal Serbia", targetPriceUsd: 75 },
+  { id: "water-flosser", name: "Water flosser", query: "water flosser discount Serbia", targetPriceUsd: 55 },
+  { id: "air-purifier-filter", name: "Air purifier filters", query: "air purifier filter sale Serbia", targetPriceUsd: 35 },
+  { id: "smart-radiator-valve", name: "Smart radiator valve", query: "smart radiator valve deal Serbia", targetPriceUsd: 45 },
+  { id: "portable-ac", name: "Portable air conditioner", query: "portable air conditioner discount Serbia", targetPriceUsd: 260 },
+  { id: "space-heater", name: "Ceramic space heater", query: "ceramic space heater sale Serbia", targetPriceUsd: 50 },
+  { id: "heated-blanket", name: "Heated blanket", query: "heated blanket deal Serbia", targetPriceUsd: 55 },
+  { id: "electric-blanket", name: "Electric blanket", query: "electric blanket sale Serbia", targetPriceUsd: 60 },
+  { id: "shoe-dryer", name: "Shoe dryer", query: "shoe dryer discount Serbia", targetPriceUsd: 45 },
+  { id: "laser-level", name: "Laser level", query: "laser level sale Serbia", targetPriceUsd: 65 },
+  { id: "stud-finder", name: "Stud finder", query: "stud finder deal Serbia", targetPriceUsd: 35 },
+  { id: "soldering-station", name: "Soldering station", query: "soldering station discount Serbia", targetPriceUsd: 75 },
+  { id: "multimeter", name: "Digital multimeter", query: "digital multimeter sale Serbia", targetPriceUsd: 40 },
+  { id: "inspection-camera", name: "Inspection camera", query: "inspection camera deal Serbia", targetPriceUsd: 60 },
+  { id: "portable-compressor", name: "Portable compressor", query: "portable compressor discount Serbia", targetPriceUsd: 90 },
+  { id: "camping-stove", name: "Camping stove", query: "camping stove sale Serbia", targetPriceUsd: 45 },
+  { id: "cooler-box", name: "Electric cooler box", query: "electric cooler box deal Serbia", targetPriceUsd: 120 },
+  { id: "hiking-gps", name: "Handheld hiking GPS", query: "handheld hiking GPS discount Serbia", targetPriceUsd: 180 },
+  { id: "sleeping-pad", name: "Inflatable sleeping pad", query: "inflatable sleeping pad sale Serbia", targetPriceUsd: 55 },
+  { id: "kids-learning-tablet", name: "Kids learning tablet", query: "kids learning tablet deal Serbia", targetPriceUsd: 80 },
+  { id: "baby-monitor-pro", name: "Baby monitor", query: "baby monitor sale Serbia", targetPriceUsd: 75 },
+  { id: "bedroom-humidifier", name: "Bedroom humidifier", query: "bedroom humidifier discount Serbia", targetPriceUsd: 45 },
+  { id: "sunrise-clock", name: "Sunrise alarm clock", query: "sunrise alarm clock sale Serbia", targetPriceUsd: 50 },
+  { id: "burr-grinder", name: "Burr coffee grinder", query: "burr coffee grinder deal Serbia", targetPriceUsd: 95 },
+  { id: "pizza-oven", name: "Countertop pizza oven", query: "countertop pizza oven sale Serbia", targetPriceUsd: 160 },
+  { id: "smart-bike-lock", name: "Smart bike lock", query: "smart bike lock discount Serbia", targetPriceUsd: 55 },
+  { id: "car-battery-charger", name: "Car battery charger", query: "car battery charger deal Serbia", targetPriceUsd: 65 },
+  { id: "portable-car-fridge", name: "Portable car fridge", query: "portable car fridge sale Serbia", targetPriceUsd: 180 },
+  { id: "pet-gps-tracker", name: "Pet GPS tracker", query: "pet GPS tracker deal Serbia", targetPriceUsd: 70 },
+  { id: "aquarium-filter", name: "Aquarium filter", query: "aquarium filter discount Serbia", targetPriceUsd: 45 },
+  { id: "led-grow-light", name: "LED grow light", query: "LED grow light sale Serbia", targetPriceUsd: 60 },
+  { id: "bike-helmet-light", name: "Bike helmet light", query: "bike helmet light sale Serbia", targetPriceUsd: 30 },
+  { id: "roof-rack", name: "Universal roof rack", query: "universal roof rack discount Serbia", targetPriceUsd: 110 },
+  { id: "knife-sharpener", name: "Electric knife sharpener", query: "electric knife sharpener deal Serbia", targetPriceUsd: 45 },
+  { id: "water-filter-pitcher", name: "Water filter pitcher", query: "water filter pitcher sale Serbia", targetPriceUsd: 35 },
+  { id: "smart-sprinkler", name: "Smart sprinkler controller", query: "smart sprinkler controller deal Serbia", targetPriceUsd: 95 },
+  { id: "stroller-fan", name: "Rechargeable stroller fan", query: "rechargeable stroller fan Serbia", targetPriceUsd: 25 },
+  { id: "soda-machine", name: "Soda maker machine", query: "soda maker machine sale Serbia", targetPriceUsd: 80 }
 ];
 
 export async function runDealScoutWorkflow(config: AppConfig, mode: WorkflowMode): Promise<WorkflowEvidence> {
@@ -156,79 +215,106 @@ export async function runDealScoutWorkflow(config: AppConfig, mode: WorkflowMode
   };
 
   evidence.selectedTools = await sap.discoverTools();
+  const enabledServices = new Set(
+    config.ACE_SERVICES.split(",")
+      .map((service) => service.trim().toLowerCase())
+      .filter(Boolean)
+  );
 
   for (const product of products) {
-    const search = await ace.call({
-      runId,
-      productId: product.id,
-      service: "search",
-      endpoint: config.SEARCH_API_PATH,
-      prompt: `Find current deal candidates for ${product.name}.`,
-      body: {
-        query: product.query,
-        type: "search",
-        country: "rs",
-        language: "en",
-        page: 1
-      }
-    });
-    evidence.aceCalls.push(search);
+    let searchStatus: number | undefined;
+    let analysisStatus: number | undefined;
+    let imageStatus: number | undefined;
+    let searchEvidence = "Search step skipped by ACE_SERVICES.";
+    let analysisEvidence = "Analysis step skipped by ACE_SERVICES.";
+    let imageResult: Awaited<ReturnType<AceX402Client["call"]>> | undefined;
 
-    const analysis = await ace.call({
-      runId,
-      productId: product.id,
-      service: "chat",
-      endpoint: config.CHAT_API_PATH,
-      prompt: `Analyze deal quality for ${product.name}.`,
-      body: {
-        model: "gpt-4o-mini",
-        messages: [
-          {
-            role: "system",
-            content: "You are a concise deal analyst. Return JSON with score, reason, buyer warning, and whether to publish."
-          },
-          {
-            role: "user",
-            content: [
-              `Market: ${config.DEAL_MARKET}`,
-              `Product: ${product.name}`,
-              `Target price USD: ${product.targetPriceUsd ?? "unknown"}`,
-              `Search evidence: ${search.output.slice(0, 1500)}`
-            ].join("\n")
-          }
-        ],
-        max_tokens: 300
-      }
-    });
-    evidence.aceCalls.push(analysis);
+    if (enabledServices.has("search")) {
+      const search = await ace.call({
+        runId,
+        productId: product.id,
+        service: "search",
+        endpoint: config.SEARCH_API_PATH,
+        prompt: `Find current deal candidates for ${product.name}.`,
+        body: {
+          query: product.query,
+          type: "search",
+          country: "rs",
+          language: "en",
+          page: 1
+        }
+      });
+      evidence.aceCalls.push(search);
+      searchStatus = search.status;
+      searchEvidence = search.output;
+    }
 
-    const image = await ace.call({
-      runId,
-      productId: product.id,
-      service: "image",
-      endpoint: config.IMAGE_API_PATH,
-      prompt: `Generate buyer-facing deal card for ${product.name}.`,
-      body: {
-        model: "flux-dev",
-        size: "1024x1024",
-        prompt: [
-          "A clean ecommerce deal card image, no logos, no fake retailer names.",
-          `Product category: ${product.name}.`,
-          "Style: crisp product-focused card, white background, tasteful accent colors."
-        ].join(" "),
-        wait: false
-      }
-    });
-    evidence.aceCalls.push(image);
+    if (enabledServices.has("chat")) {
+      const analysis = await ace.call({
+        runId,
+        productId: product.id,
+        service: "chat",
+        endpoint: config.CHAT_API_PATH,
+        prompt: `Analyze deal quality for ${product.name}.`,
+        body: {
+          model: "gpt-4o-mini",
+          messages: [
+            {
+              role: "system",
+              content: "You are a concise deal analyst. Return JSON with score, reason, buyer warning, and whether to publish."
+            },
+            {
+              role: "user",
+              content: [
+                `Market: ${config.DEAL_MARKET}`,
+                `Product: ${product.name}`,
+                `Target price USD: ${product.targetPriceUsd ?? "unknown"}`,
+                `Search evidence: ${searchEvidence.slice(0, 1500)}`
+              ].join("\n")
+            }
+          ],
+          max_tokens: 300
+        }
+      });
+      evidence.aceCalls.push(analysis);
+      analysisStatus = analysis.status;
+      analysisEvidence = analysis.output;
+    }
+
+    if (enabledServices.has("image")) {
+      const image = await ace.call({
+        runId,
+        productId: product.id,
+        service: "image",
+        endpoint: config.IMAGE_API_PATH,
+        prompt: `Generate buyer-facing deal card for ${product.name}.`,
+        body: {
+          model: "flux-dev",
+          size: "1024x1024",
+          prompt: [
+            "A clean ecommerce deal card image, no logos, no fake retailer names.",
+            `Product category: ${product.name}.`,
+            "Style: crisp product-focused card, white background, tasteful accent colors.",
+            `Analysis: ${analysisEvidence.slice(0, 500)}`
+          ].join(" "),
+          wait: false
+        }
+      });
+      evidence.aceCalls.push(image);
+      imageStatus = image.status;
+      imageResult = image;
+    }
 
     const memoTx = await writeMemoReceipt(config, mode, runId, product.id, {
       product,
-      searchStatus: search.status,
-      analysisStatus: analysis.status,
-      imageStatus: image.status,
-      serviceCount: 3
+      searchStatus,
+      analysisStatus,
+      imageStatus,
+      serviceCount: enabledServices.size
     });
-    if (memoTx) image.payment = { ...image.payment, rawHeaders: { ...image.payment?.rawHeaders, memoTx } };
+    if (memoTx && imageResult) {
+      imageResult.payment = { ...imageResult.payment, rawHeaders: { ...imageResult.payment?.rawHeaders, memoTx } };
+    }
   }
 
   evidence.finalReport = buildReport(products, evidence.aceCalls.length, ace.remainingUsd);

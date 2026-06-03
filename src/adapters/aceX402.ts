@@ -83,6 +83,10 @@ export class AceX402Client {
       };
     }
 
+    if (this.config.ACE_REQUEST_MODE === "api_key") {
+      return this.callWithApiKey(input);
+    }
+
     const payer = this.loadPayer();
     const first = await fetch(`${this.config.ACE_API_BASE_URL}${input.endpoint}`, {
       method: "POST",
@@ -159,6 +163,45 @@ export class AceX402Client {
         amount: requirement.maxAmountRequired,
         rawHeaders: headers
       }
+    };
+  }
+
+  private async callWithApiKey(input: PaidCallInput): Promise<AceCallResult> {
+    if (!this.config.ACE_API_KEY) throw new Error("Missing ACE_API_KEY for ACE_REQUEST_MODE=api_key.");
+
+    await this.logBeforePayment(input, {
+      apiKeyMode: true,
+      authorization: "<redacted>",
+      note: "Ace credits/API-key mode; not x402 settlement evidence"
+    });
+
+    const response = await this.withRetry(
+      () =>
+        fetch(`${this.config.ACE_API_BASE_URL}${input.endpoint}`, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${this.config.ACE_API_KEY}`
+          },
+          body: JSON.stringify(input.body)
+        }),
+      `Ace API-key call ${input.productId}/${input.service}`
+    );
+
+    const text = await response.text();
+    await this.logCreditUsage(input, {
+      status: response.status,
+      ok: response.ok,
+      outputPreview: text.slice(0, 600)
+    });
+    console.log(`[ace-credits] ${input.productId} ${input.service} status: ${response.status}`);
+
+    return {
+      service: input.service,
+      endpoint: input.endpoint,
+      prompt: input.prompt,
+      status: response.status,
+      output: text.slice(0, 4000)
     };
   }
 
@@ -326,6 +369,20 @@ export class AceX402Client {
       ...data
     };
     await appendFile(join(this.config.OUTPUT_DIR, `${input.runId}.payments.jsonl`), `${JSON.stringify(entry)}\n`);
+  }
+
+  private async logCreditUsage(input: PaidCallInput, data: Record<string, unknown>): Promise<void> {
+    await mkdir(this.config.OUTPUT_DIR, { recursive: true });
+    const entry = {
+      ts: new Date().toISOString(),
+      phase: "ace_credit_usage",
+      runId: input.runId,
+      productId: input.productId,
+      service: input.service,
+      endpoint: input.endpoint,
+      ...data
+    };
+    await appendFile(join(this.config.OUTPUT_DIR, `${input.runId}.credits.jsonl`), `${JSON.stringify(entry)}\n`);
   }
 
   private safeRequirement(requirement: PaymentRequirement): Record<string, unknown> {
