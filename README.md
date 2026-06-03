@@ -9,7 +9,7 @@ Primary category: **Ace Data Cloud Usage (x402 Facilitator)**.
 - Public dashboard: https://rugbusteraipatrol.github.io/Bounty/dashboard/
 - SAP agent PDA: `3QFF3jzskQcCagkQLc9c4mno6HvWD5xmdgdXfMigTt9m`
 - SAP registration tx: https://solscan.io/tx/2UdKHkCphzbBitMnMERWAQ1YdydGKu12sbFXs426nsqx6jsZvMtMsscKdoDAistkjJ1KuUcVfFLgsHaCbsiZUoFL
-- x402 settlements: `349` real on-chain Solana payments
+- x402 settlements: `385` real on-chain Solana payments
 - x402 settlements logged in `logs/x402_settlements.md`
 
 ## Why This Agent

@@ -121,7 +121,22 @@ const defaultProducts: ProductCandidate[] = [
   { id: "cat-water-fountain", name: "Cat water fountain", query: "cat water fountain sale Serbia", targetPriceUsd: 30 },
   { id: "garden-hose-reel", name: "Garden hose reel", query: "garden hose reel deal Serbia", targetPriceUsd: 45 },
   { id: "pressure-washer", name: "Pressure washer", query: "pressure washer discount Serbia", targetPriceUsd: 120 },
-  { id: "cordless-drill", name: "Cordless drill", query: "cordless drill sale Serbia", targetPriceUsd: 85 }
+  { id: "cordless-drill", name: "Cordless drill", query: "cordless drill sale Serbia", targetPriceUsd: 85 },
+  { id: "robot-vacuum", name: "Robot vacuum", query: "robot vacuum best deal Serbia", targetPriceUsd: 180 },
+  { id: "air-fryer-oven", name: "Air fryer oven", query: "air fryer oven discount Serbia", targetPriceUsd: 95 },
+  { id: "portable-monitor", name: "Portable monitor", query: "portable monitor sale Serbia", targetPriceUsd: 140 },
+  { id: "mini-projector", name: "Mini projector", query: "mini projector best price Serbia", targetPriceUsd: 110 },
+  { id: "mesh-router", name: "Mesh WiFi router", query: "mesh wifi router deal Serbia", targetPriceUsd: 120 },
+  { id: "gaming-chair", name: "Gaming chair", query: "gaming chair discount Serbia", targetPriceUsd: 130 },
+  { id: "standing-desk", name: "Standing desk", query: "standing desk sale Serbia", targetPriceUsd: 220 },
+  { id: "dash-cam", name: "Dash cam", query: "dash cam sale Serbia", targetPriceUsd: 75 },
+  { id: "thermal-printer", name: "Thermal label printer", query: "thermal label printer deal Serbia", targetPriceUsd: 90 },
+  { id: "network-nas", name: "Home NAS", query: "home NAS discount Serbia", targetPriceUsd: 260 },
+  { id: "graphics-tablet", name: "Graphics tablet", query: "graphics tablet sale Serbia", targetPriceUsd: 70 },
+  { id: "wireless-mic", name: "Wireless microphone", query: "wireless microphone deal Serbia", targetPriceUsd: 85 },
+  { id: "bike-trainer", name: "Indoor bike trainer", query: "indoor bike trainer sale Serbia", targetPriceUsd: 160 },
+  { id: "tool-kit", name: "Home repair tool kit", query: "home repair tool kit discount Serbia", targetPriceUsd: 55 },
+  { id: "water-filter", name: "Countertop water filter", query: "countertop water filter sale Serbia", targetPriceUsd: 65 }
 ];
 
 export async function runDealScoutWorkflow(config: AppConfig, mode: WorkflowMode): Promise<WorkflowEvidence> {
