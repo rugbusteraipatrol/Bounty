@@ -1,4 +1,4 @@
-import { mkdir, readFile, writeFile } from "node:fs/promises";
+import { mkdir, readFile, readdir, writeFile } from "node:fs/promises";
 import { dirname, join, resolve } from "node:path";
 
 const root = process.cwd();
@@ -14,6 +14,7 @@ const rows = raw
   .filter((row) => row.note.includes("x402 settlement detected"));
 
 const stats = buildStats(rows);
+stats.credits = await buildCreditStats();
 const recentRows = rows.slice().reverse();
 const cleanRows = rows.filter((row) => row.status === 200).slice().reverse();
 const latestRun = recentRows[0]?.run ?? "deal-scout-live";
@@ -63,6 +64,31 @@ function buildStats(items) {
     services,
     successRate: items.length ? Math.round((clean200 / items.length) * 100) : 0
   };
+}
+
+async function buildCreditStats() {
+  const logDir = join(root, "logs");
+  const files = (await readdir(logDir)).filter((file) => file.endsWith(".credits.jsonl"));
+  const stats = {
+    total: 0,
+    ok200: 0,
+    failed403: 0,
+    byService: {}
+  };
+
+  for (const file of files) {
+    const content = await readFile(join(logDir, file), "utf8");
+    for (const line of content.split(/\r?\n/).filter(Boolean)) {
+      const entry = JSON.parse(line);
+      stats.total += 1;
+      if (entry.status === 200) stats.ok200 += 1;
+      if (entry.status === 403) stats.failed403 += 1;
+      stats.byService[entry.service] ??= {};
+      stats.byService[entry.service][entry.status] = (stats.byService[entry.service][entry.status] ?? 0) + 1;
+    }
+  }
+
+  return stats;
 }
 
 function renderHtml({ rows, cleanRows, stats, latestRun }) {
@@ -413,7 +439,8 @@ function renderHtml({ rows, cleanRows, stats, latestRun }) {
       ["Clean 200 OK", stats.clean200, "cyan", stats.successRate + "% service fulfillment"],
       ["USDC Spent", "$" + stats.totalSpent.toFixed(4), "amber", "Paid through x402, no API key"],
       ["Services Used", stats.services.length, "purple", stats.services.join(", ")],
-      ["SAP Registered", "YES", "green", "Agent PDA 3QFF...Tt9m"]
+      ["SAP Registered", "YES", "green", "Agent PDA 3QFF...Tt9m"],
+      ["Ace Credits 200", stats.credits.ok200, "cyan", stats.credits.total + " API-key credit calls tested"]
     ];
     document.getElementById("stats").innerHTML = statCards.map(([label, value, color, hint]) => \`
       <article class="card">
@@ -430,7 +457,8 @@ function renderHtml({ rows, cleanRows, stats, latestRun }) {
       ["02", "SAP tool discovery", "Agent touches the Synapse Agent Protocol layer before execution.", { discoveredTools: ["Synapse Sentinel", "Ace SERP", "Ace Chat", "Ace Flux"] }],
       ["03", "x402 payment submitted", "Each Ace call is paid by a pre-submitted Solana USDC transfer, then retried with X-Payment.", { rail: "x402", network: "solana", asset: "USDC", status: "SETTLED" }],
       ["04", "Ace services executed", "Search, reasoning, and image-generation results are tied to independent product workflows.", { services: stats.services, clean200: stats.clean200 }],
-      ["05", "Evidence written", "The agent writes JSON logs and a settlement ledger with Solscan links for evaluator review.", { settlements: stats.totalSettlements, latestRun }]
+      ["05", "Supplemental credits usage", "After the x402 run, Ace app credits were tested separately through API-key mode. This is logged separately and not counted as x402 settlement evidence.", { successfulCreditCalls: stats.credits.ok200, totalCreditCalls: stats.credits.total, byService: stats.credits.byService }],
+      ["06", "Evidence written", "The agent writes JSON logs and a settlement ledger with Solscan links for evaluator review.", { settlements: stats.totalSettlements, latestRun }]
     ];
     document.getElementById("trace").innerHTML = traceRows.map(([no, title, body, payload]) => \`
       <div class="step">
