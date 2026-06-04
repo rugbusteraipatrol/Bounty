@@ -392,7 +392,27 @@ const defaultProducts: ProductCandidate[] = [
   { id: "waffle-maker", name: "Rotating waffle maker", query: "rotating waffle maker sale Serbia", targetPriceUsd: 70 },
   { id: "crepe-maker", name: "Electric crepe maker", query: "electric crepe maker deal Serbia", targetPriceUsd: 50 },
   { id: "chocolate-fountain", name: "Chocolate fountain", query: "chocolate fountain discount Serbia", targetPriceUsd: 60 },
-  { id: "popcorn-machine", name: "Countertop popcorn machine", query: "countertop popcorn machine sale Serbia", targetPriceUsd: 90 }
+  { id: "popcorn-machine", name: "Countertop popcorn machine", query: "countertop popcorn machine sale Serbia", targetPriceUsd: 90 },
+  { id: "smart-irrigation-valve", name: "Smart irrigation valve", query: "smart irrigation valve sale Serbia", targetPriceUsd: 70 },
+  { id: "garden-tiller", name: "Cordless garden tiller", query: "cordless garden tiller deal Serbia", targetPriceUsd: 180 },
+  { id: "electric-pruner", name: "Electric pruning shears", query: "electric pruning shears discount Serbia", targetPriceUsd: 110 },
+  { id: "leaf-blower", name: "Cordless leaf blower", query: "cordless leaf blower sale Serbia", targetPriceUsd: 130 },
+  { id: "chainsaw-mini", name: "Mini cordless chainsaw", query: "mini cordless chainsaw deal Serbia", targetPriceUsd: 90 },
+  { id: "hedge-trimmer", name: "Cordless hedge trimmer", query: "cordless hedge trimmer discount Serbia", targetPriceUsd: 120 },
+  { id: "lawn-mower-robot", name: "Robot lawn mower", query: "robot lawn mower sale Serbia", targetPriceUsd: 520 },
+  { id: "pressure-sprayer", name: "Battery garden sprayer", query: "battery garden sprayer deal Serbia", targetPriceUsd: 75 },
+  { id: "patio-heater", name: "Outdoor patio heater", query: "outdoor patio heater discount Serbia", targetPriceUsd: 190 },
+  { id: "fire-pit", name: "Smokeless fire pit", query: "smokeless fire pit sale Serbia", targetPriceUsd: 160 },
+  { id: "outdoor-projector", name: "Outdoor movie projector", query: "outdoor movie projector deal Serbia", targetPriceUsd: 220 },
+  { id: "projector-screen", name: "Portable projector screen", query: "portable projector screen discount Serbia", targetPriceUsd: 85 },
+  { id: "patio-umbrella", name: "Solar LED patio umbrella", query: "solar LED patio umbrella sale Serbia", targetPriceUsd: 140 },
+  { id: "hammock-stand", name: "Freestanding hammock stand", query: "freestanding hammock stand deal Serbia", targetPriceUsd: 130 },
+  { id: "outdoor-storage-box", name: "Outdoor storage deck box", query: "outdoor storage deck box discount Serbia", targetPriceUsd: 120 },
+  { id: "garden-bench", name: "Foldable garden bench", query: "foldable garden bench sale Serbia", targetPriceUsd: 110 },
+  { id: "solar-path-lights", name: "Solar path lights", query: "solar path lights deal Serbia", targetPriceUsd: 45 },
+  { id: "security-floodlight", name: "Motion security floodlight", query: "motion security floodlight discount Serbia", targetPriceUsd: 75 },
+  { id: "outdoor-wifi-extender", name: "Outdoor WiFi extender", query: "outdoor WiFi extender sale Serbia", targetPriceUsd: 95 },
+  { id: "weatherproof-speaker", name: "Weatherproof outdoor speaker", query: "weatherproof outdoor speaker deal Serbia", targetPriceUsd: 100 }
 ];
 
 export async function runDealScoutWorkflow(config: AppConfig, mode: WorkflowMode): Promise<WorkflowEvidence> {
