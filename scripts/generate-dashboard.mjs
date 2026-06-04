@@ -433,8 +433,10 @@ function renderHtml({ rows, cleanRows, stats, latestRun }) {
     const cleanRows = ${cleanJson};
     const stats = ${statsJson};
     const latestRun = ${latestRunJson};
+    const combinedSuccessfulCalls = stats.totalSettlements + stats.credits.ok200;
 
     const statCards = [
+      ["Total Agent Calls", combinedSuccessfulCalls, "green", "x402 settlements + successful Ace credits"],
       ["Total Settlements", stats.totalSettlements, "green", "Real x402 payments on Solana"],
       ["Clean 200 OK", stats.clean200, "cyan", stats.successRate + "% service fulfillment"],
       ["USDC Spent", "$" + stats.totalSpent.toFixed(4), "amber", "Paid through x402, no API key"],
